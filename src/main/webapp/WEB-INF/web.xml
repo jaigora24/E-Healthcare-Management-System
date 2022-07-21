@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+  <display-name>Patient Management System</display-name>
+  <welcome-file-list>
+    <welcome-file>Home.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+	  <servlet-name>AddPatientServlet</servlet-name>
+	  <servlet-class>com.Servlet.AddPatientServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	  <servlet-name>AddPatientServlet</servlet-name>
+	  <url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  <servlet>
+	  <servlet-name>DeletePatientServlet</servlet-name>
+	  <servlet-class>com.Servlet.DeletePatientServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	  <servlet-name>DeletePatientServlet</servlet-name>
+	  <url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+  <servlet>
+	  <servlet-name>SearchPatientServlet</servlet-name>
+	  <servlet-class>com.Servlet.SearchPatientServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	  <servlet-name>SearchPatientServlet</servlet-name>
+	  <url-pattern>/search</url-pattern>
+  </servlet-mapping>
+  <servlet>
+	  <servlet-name>UpdatePatientServlet</servlet-name>
+	  <servlet-class>com.Servlet.UpdatePatientServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	  <servlet-name>UpdatePatientServlet</servlet-name>
+	  <url-pattern>/update</url-pattern>
+  </servlet-mapping> 
+  <servlet>
+	  <servlet-name>LoginServlet</servlet-name>
+	  <servlet-class>com.Servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	  <servlet-name>LoginServlet</servlet-name>
+	  <url-pattern>/login</url-pattern>
+  </servlet-mapping> 
+</web-app>
