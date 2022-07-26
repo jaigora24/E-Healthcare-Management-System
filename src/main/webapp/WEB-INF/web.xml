@@ -13,6 +13,14 @@
 	  <url-pattern>/add</url-pattern>
   </servlet-mapping>
   <servlet>
+	  <servlet-name>PatientPortalServlet</servlet-name>
+	  <servlet-class>com.Servlet.PatientPortalServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	  <servlet-name>PatientPortalServlet</servlet-name>
+	  <url-pattern>/PatientPortal</url-pattern>
+  </servlet-mapping>
+  <servlet>
 	  <servlet-name>DeletePatientServlet</servlet-name>
 	  <servlet-class>com.Servlet.DeletePatientServlet</servlet-class>
   </servlet>
@@ -21,27 +29,11 @@
 	  <url-pattern>/delete</url-pattern>
   </servlet-mapping>
   <servlet>
-	  <servlet-name>SearchPatientServlet</servlet-name>
-	  <servlet-class>com.Servlet.SearchPatientServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-	  <servlet-name>SearchPatientServlet</servlet-name>
-	  <url-pattern>/search</url-pattern>
-  </servlet-mapping>
-  <servlet>
-	  <servlet-name>UpdatePatientServlet</servlet-name>
-	  <servlet-class>com.Servlet.UpdatePatientServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-	  <servlet-name>UpdatePatientServlet</servlet-name>
-	  <url-pattern>/update</url-pattern>
-  </servlet-mapping> 
-  <servlet>
 	  <servlet-name>LoginServlet</servlet-name>
 	  <servlet-class>com.Servlet.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
 	  <servlet-name>LoginServlet</servlet-name>
 	  <url-pattern>/login</url-pattern>
-  </servlet-mapping> 
+  </servlet-mapping>
 </web-app>
