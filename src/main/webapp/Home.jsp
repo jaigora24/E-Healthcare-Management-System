@@ -18,11 +18,11 @@
     	...........................<br>
     	...........................<br>
     	...........................<br>
-    	...........................<br>
-    	...........................<br>
+    	<form action="PatientPortal" method="post">
+		<h1>Search Your Report Id</h1>
+			<input type="text" placeholder="Report Id" name="reportid">
+			<input type="submit" value="Search">
+		</form>
     	<br>
-    	<form name="reportSearch"  method="get" action="PatientPortal.jsp">
-        	<input type="submit" value="Search Your Report" >
-    	</form>
 	</body>
 </html>
