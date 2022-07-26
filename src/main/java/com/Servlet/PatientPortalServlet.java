@@ -131,12 +131,14 @@ public class PatientPortalServlet extends HttpServlet{
 					out.println("</tr>");
 					out.println("</div>");
 				out.println("</table>");
+				out.println("<button id='print-btn' onclick='print_page()'>Download Report</button>");
+				out.println("<script src='script.js'></script>");
 			}
 		}
 		catch(Exception e) {
-			out.println("<script type=\"text/javascript\">");
-		    out.println("alert('Some Error Occured. Please contact the development team');");
-		    out.println("</script>");
+		    out.println("<h1 text-align='center'>");
+		    out.println("Some Error Occured. Please contact the development team");
+		    out.println("</h1>");
 		    System.out.println(e);
 		}
 
