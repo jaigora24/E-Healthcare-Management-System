@@ -1,16 +1,12 @@
 body{ 
 	background-color : e2e2e2;    
 }
-
-
 .heading{
 	color:white;
 	background-color:black;
 	text-align: center;
 	font-size:40px;   
 }
-
-
 table {  
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -19,27 +15,36 @@ table {
   margin-left: auto;
   margin-right: auto;
 }
-
-
 @media screen and (max-width: 540px) {
   table {
       width: 100%;
     }
 }
-
-
 td, th { 
   border: 1px solid black;
   text-align: left;
   padding: 8px;
 }
-
-
 tr:nth-child(odd) {
   background-color:#0ACF7E;
 }
-
-
 tr:nth-child(even) {
   background-color:#05FF99;
+}
+#print-btn{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+#print-btn:hover {
+  background-color: white;
+  color: black;
+  border:1px black;
 }
