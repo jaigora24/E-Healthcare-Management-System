@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class PatientPortalServlet extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	ResultSet resultSet = null;
-	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
+	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {	
 		String pid;
 		res.setContentType("text/html");
 		PrintWriter out = res.getWriter();
@@ -38,9 +38,9 @@ public class PatientPortalServlet extends HttpServlet{
 				out.println("<br>");
 				out.println("</div>");
 				out.println("<br>");
-				out.println("<hr>");
+				out.println("<hr>");	
 				out.println("<table style='border:1px solid black margin-left:auto;margin-right:auto;'>");
-                                //print report in table format
+				// print fetched data in table HTML table form
 					out.println("<tr>");
 					out.println("<td>");
 						out.print("<b>Patient's Name : </b>");
@@ -64,7 +64,7 @@ public class PatientPortalServlet extends HttpServlet{
 					out.println("<td>");
 						out.println(resultSet.getString("Gender"));
 					out.println("</td>");
-					out.println("</tr>");	
+					out.println("</tr>");		
 					out.println("<tr>");
 					out.println("<td>");
 						out.print("<b>Patient's Email : </b>");
@@ -72,7 +72,7 @@ public class PatientPortalServlet extends HttpServlet{
 					out.println("<td>");
 						out.println(resultSet.getString("Email"));
 					out.println("</td>");
-					out.println("</tr>");	
+					out.println("</tr>");		
 					out.println("<tr>");
 					out.println("<td>");
 						out.print("<b>Patient's Phone Number : </b>");
@@ -139,7 +139,7 @@ public class PatientPortalServlet extends HttpServlet{
 		    out.println("</script>");
 		    System.out.println(e);
 		}
-	
+
 	}
 
 }
