@@ -8,13 +8,12 @@ import java.sql.PreparedStatement;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
 public class AddPatientServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	String name, age, gender, email, phone, aadhar, disease, reportid, status, medicine, note;
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		res.setContentType("text/html");
-		
+		PrintWriter out = res.getWriter();
 		name = req.getParameter("name");
 		age = req.getParameter("age");
 		gender = req.getParameter("gender");
@@ -26,9 +25,6 @@ public class AddPatientServlet extends HttpServlet {
 		status = req.getParameter("status");
 		medicine = req.getParameter("medicine");
 		note = req.getParameter("note");
-		
-		PrintWriter out = res.getWriter();
-		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/patientmanagementsystem","root","");
@@ -47,15 +43,15 @@ public class AddPatientServlet extends HttpServlet {
 			pst.setString(11, note);
 			pst.executeUpdate();
 			out.println("<script type=\"text/javascript\">");
-		        out.println("alert('Added Successfully');");
-		        out.println("</script>");
-		        res.sendRedirect("AddPatient.jsp"); 
+		    out.println("alert('Added Successfully');");
+		    out.println("</script>");
+		    res.sendRedirect("AddPatient.jsp"); 
 		}
 		catch(Exception e) {
 			out.println("<script type=\"text/javascript\">");
-		        out.println("alert('Some Error Occured. Please contact the development team');");
-		        out.println("</script>");
-		        System.out.println(e);
+		    out.println("alert('Some Error Occured. Please contact the development team');");
+		    out.println("</script>");
+		    System.out.println(e);
 		}
 		
 	}
