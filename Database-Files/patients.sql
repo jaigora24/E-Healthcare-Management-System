@@ -46,7 +46,6 @@ CREATE TABLE `patients` (
 -- Dumping data for table `patients`
 --
 
-
 INSERT INTO `patients` (`id`, `Name`, `Age`, `Gender`, `Email`, `Phone`, `AadharNo`, `Disease`, `ReportId`, `ReportStatus`, `Medicine`, `Note`) VALUES
 (6, 'example5', '6', 'Female', 'example@gmail.com', '234523454', '324534523452345', 'Cough', 'ABC100', '', '', ''),
 (7, 'Arjun', '10', 'Male', 'arjun@gmail.com', '9876543210', '1234 5678 9876', 'Fever', 'ABC200', 'Positive', 'Paracetamol', 'Take PCM when you feel your body is fell weak'),
@@ -56,7 +55,6 @@ INSERT INTO `patients` (`id`, `Name`, `Age`, `Gender`, `Email`, `Phone`, `Aadhar
 --
 -- Indexes for dumped tables
 --
-
 
 --
 -- Indexes for table `patients`
@@ -68,7 +66,6 @@ ALTER TABLE `patients`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
 
 --
 -- AUTO_INCREMENT for table `patients`

@@ -1,0 +1,12 @@
+[
+{"type":"header","version":"5.1.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"patientmanagementsystem"},
+{"type":"table","name":"patients","database":"patientmanagementsystem","data":
+[
+{"id":"6","Name":"example5","Age":"6","Gender":"Female","Email":"example@gmail.com","Phone":"234523454","AadharNo":"324534523452345","Disease":"Cough","ReportId":"ABC100","ReportStatus":"","Medicine":"","Note":""},
+{"id":"7","Name":"Arjun","Age":"10","Gender":"Male","Email":"arjun@gmail.com","Phone":"9876543210","AadharNo":"1234 5678 9876","Disease":"Fever","ReportId":"ABC200","ReportStatus":"Positive","Medicine":"Paracetamol","Note":"Take PCM when you feel your body is fell weak"},
+{"id":"4","Name":"Example","Age":"10","Gender":"Male","Email":"example@gmail.com","Phone":"546346356","AadharNo":"32452345234523","Disease":"fever","ReportId":"ABC456","ReportStatus":"","Medicine":"","Note":""},
+{"id":"5","Name":"Example","Age":"12","Gender":"Female","Email":"example@gmail.com","Phone":"456245634","AadharNo":"45364543","Disease":"COVID","ReportId":"ABC500","ReportStatus":"Negative","Medicine":"NA","Note":"NA"}
+]
+}
+]
