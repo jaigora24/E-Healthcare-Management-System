@@ -1,6 +1,6 @@
 # Patient-Management-System
 
-UI Sample or Architecture
+Sample Web Architecture
 
 <!--<img src = "https://github.com/jaigora24/Patient-Management-System/blob/main/img/1.png" alt="Home Page">-->
 <img src = "https://github.com/jaigora24/Patient-Management-System/blob/main/img/PatientPortal.png" alt="Patient Details">
