@@ -10,7 +10,11 @@ Sample Web Architecture
 
 ## Tech Stack Used
 
-### **Frontend** : HTML, CSS, Bootstrap, JavaScript, jQuery
-### **Backend** : Java, JSP, Servlet, JDBC, MySQL, SQL
-### **Server** : Tomcat
-### **IDE Used** : Eclipse, VS Code
+### **Frontend** : 
+HTML, CSS, Bootstrap, JavaScript, jQuery
+### **Backend** :
+Java, JSP, Servlet, JDBC, MySQL, SQL
+### **Server** :
+Tomcat
+### **IDE Used** :
+Eclipse, VS Code
