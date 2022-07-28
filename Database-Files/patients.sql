@@ -59,6 +59,7 @@ INSERT INTO `patients` (`id`, `Name`, `Age`, `Gender`, `Email`, `Phone`, `Aadhar
 --
 -- Indexes for table `patients`
 --
+
 ALTER TABLE `patients`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `ReportId` (`ReportId`);
@@ -70,6 +71,7 @@ ALTER TABLE `patients`
 --
 -- AUTO_INCREMENT for table `patients`
 --
+
 ALTER TABLE `patients`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
