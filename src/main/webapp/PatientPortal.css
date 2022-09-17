@@ -1,35 +1,33 @@
-body{ 
-	background-color : e2e2e2;    
+body{
+	background-color : #282828;
 }
 .heading{
 	color:white;
-	background-color:black;
+	background-color:#000000;
 	text-align: center;
-	font-size:40px;   
+	font-size:40px;
 }
-table {  
-  font-family: arial, sans-serif;
+table {font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 50%;
-  color:black;
+  color:white;
   margin-left: auto;
-  margin-right: auto;
-}
+  margin-right: auto;}
 @media screen and (max-width: 540px) {
   table {
       width: 100%;
-    }
+  }
 }
-td, th { 
+td, th {
   border: 1px solid black;
   text-align: left;
   padding: 8px;
 }
 tr:nth-child(odd) {
-  background-color:#0ACF7E;
+  background-color:#000066;
 }
 tr:nth-child(even) {
-  background-color:#05FF99;
+  background-color:black;
 }
 #print-btn{
   background-color: black;
