@@ -16,7 +16,6 @@ public class AddPatientServlet extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		res.setContentType("text/html");
 		PrintWriter out = res.getWriter();
-		
 		name = req.getParameter("name");
 		age = req.getParameter("age");
 		gender = req.getParameter("gender");
@@ -28,13 +27,11 @@ public class AddPatientServlet extends HttpServlet {
 		status = req.getParameter("status");
 		medicine = req.getParameter("medicine");
 		note = req.getParameter("note");
-		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/patientmanagementsystem","root","");
 			String query="INSERT INTO patients(Name,Age,Gender,Email,Phone,AadharNo,Disease,ReportId,ReportStatus,Medicine,Note) values(?,?,?,?,?,?,?,?,?,?,?)";
 			PreparedStatement pst = con.prepareStatement(query);
-			
 			pst.setString(1, name);
 			pst.setString(2, age);
 			pst.setString(3, gender);
@@ -46,13 +43,11 @@ public class AddPatientServlet extends HttpServlet {
 			pst.setString(9, status);
 			pst.setString(10, medicine);
 			pst.setString(11, note);
-	
 			pst.executeUpdate();
-
-		    res.sendRedirect("AdminPortal.jsp"); 
+			res.sendRedirect("AdminPortal.jsp"); 
 		}
 		catch(Exception e) {
-			out.println("<h1 text-align='center'>");
+		    out.println("<h1 text-align='center'>");
 		    out.println("Some Error Occured. Please contact the development team");
 		    out.println("</h1>");
 		    System.out.println(e);
