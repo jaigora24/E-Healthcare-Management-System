@@ -8,6 +8,7 @@
 		<title>Update Patient</title>
 	</head>
 	<body>
+	
 		<%
 		String name = request.getParameter("name");
 		String age = request.getParameter("age");
@@ -39,10 +40,15 @@
 				response.sendRedirect("AdminPortal.jsp");
 			}
 			else{
-				out.println("Error Occured!! Contact the Developer Team");
+				out.println("<h1 text-align='center'>");
+			    out.println("Some Error Occured. Please contact the development team");
+			    out.println("</h1>");
 			}
 		}
 		catch(Exception e){
+			out.println("<h1 text-align='center'>");
+		    out.println("Some Error Occured. Please contact the development team");
+		    out.println("</h1>");
 			System.out.println(e);
 		}
 		%>
