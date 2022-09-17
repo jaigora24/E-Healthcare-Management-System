@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+
 public class DeletePatientServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
@@ -21,18 +22,15 @@ public class DeletePatientServlet extends HttpServlet {
 			String pid = req.getParameter("reportid");
 			pst.setString(1, pid);
 			pst.executeUpdate();
-			out.println("<script type=\"text/javascript\">");
-		    out.println("alert('Patient Data Deleted Successfully');");
-		    out.println("</script>");
-		    res.sendRedirect("DeletePatient.jsp"); 	
+		        res.sendRedirect("AdminPortal.jsp"); 	
 		}
 		catch(Exception e) {
-			out.println("<script type=\"text/javascript\">");
-		    out.println("alert('Some Error Occured. Please contact the development team');");
-		    out.println("</script>");
-		    System.out.println(e);
+			out.println("<h1 text-align='center'>");
+		        out.println("Some Error Occured. Please contact the development team");
+		        out.println("</h1>");
+		        System.out.println(e);
 		}
-
+	
 	}
 
 }
