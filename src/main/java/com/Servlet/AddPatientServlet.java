@@ -5,15 +5,18 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+
 public class AddPatientServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	String name, age, gender, email, phone, aadhar, disease, reportid, status, medicine, note;
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		res.setContentType("text/html");
 		PrintWriter out = res.getWriter();
+		
 		name = req.getParameter("name");
 		age = req.getParameter("age");
 		gender = req.getParameter("gender");
@@ -25,11 +28,13 @@ public class AddPatientServlet extends HttpServlet {
 		status = req.getParameter("status");
 		medicine = req.getParameter("medicine");
 		note = req.getParameter("note");
+		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/patientmanagementsystem","root","");
 			String query="INSERT INTO patients(Name,Age,Gender,Email,Phone,AadharNo,Disease,ReportId,ReportStatus,Medicine,Note) values(?,?,?,?,?,?,?,?,?,?,?)";
 			PreparedStatement pst = con.prepareStatement(query);
+			
 			pst.setString(1, name);
 			pst.setString(2, age);
 			pst.setString(3, gender);
@@ -41,16 +46,15 @@ public class AddPatientServlet extends HttpServlet {
 			pst.setString(9, status);
 			pst.setString(10, medicine);
 			pst.setString(11, note);
+	
 			pst.executeUpdate();
-			out.println("<script type=\"text/javascript\">");
-		    out.println("alert('Added Successfully');");
-		    out.println("</script>");
-		    res.sendRedirect("AddPatient.jsp"); 
+
+		    res.sendRedirect("AdminPortal.jsp"); 
 		}
 		catch(Exception e) {
-			out.println("<script type=\"text/javascript\">");
-		    out.println("alert('Some Error Occured. Please contact the development team');");
-		    out.println("</script>");
+			out.println("<h1 text-align='center'>");
+		    out.println("Some Error Occured. Please contact the development team");
+		    out.println("</h1>");
 		    System.out.println(e);
 		}
 		
