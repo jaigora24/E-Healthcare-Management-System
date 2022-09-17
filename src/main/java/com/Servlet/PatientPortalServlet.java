@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -38,9 +39,9 @@ public class PatientPortalServlet extends HttpServlet{
 				out.println("<br>");
 				out.println("</div>");
 				out.println("<br>");
-				out.println("<hr>");	
+				out.println("<hr>");
+				out.println("<br>");
 				out.println("<table style='border:1px solid black margin-left:auto;margin-right:auto;'>");
-				// print fetched data in table HTML table form
 					out.println("<tr>");
 					out.println("<td>");
 						out.print("<b>Patient's Name : </b>");
@@ -49,6 +50,7 @@ public class PatientPortalServlet extends HttpServlet{
 						out.println(resultSet.getString("Name"));
 					out.println("</td>");
 					out.println("</tr>");
+		
 					out.println("<tr>");
 					out.println("<td>");
 						out.print("<b>Patient's Age : </b>");
@@ -56,7 +58,8 @@ public class PatientPortalServlet extends HttpServlet{
 					out.println("<td>");
 						out.println(resultSet.getString("Age"));
 					out.println("</td>");
-					out.println("</tr>");	
+					out.println("</tr>");
+					
 					out.println("<tr>");
 					out.println("<td>");
 						out.print("<b>Patient's Gender : </b>");
@@ -64,7 +67,8 @@ public class PatientPortalServlet extends HttpServlet{
 					out.println("<td>");
 						out.println(resultSet.getString("Gender"));
 					out.println("</td>");
-					out.println("</tr>");		
+					out.println("</tr>");
+					
 					out.println("<tr>");
 					out.println("<td>");
 						out.print("<b>Patient's Email : </b>");
@@ -72,7 +76,8 @@ public class PatientPortalServlet extends HttpServlet{
 					out.println("<td>");
 						out.println(resultSet.getString("Email"));
 					out.println("</td>");
-					out.println("</tr>");		
+					out.println("</tr>");
+						
 					out.println("<tr>");
 					out.println("<td>");
 						out.print("<b>Patient's Phone Number : </b>");
@@ -80,7 +85,8 @@ public class PatientPortalServlet extends HttpServlet{
 					out.println("<td>");
 						out.println(resultSet.getString("Phone"));
 					out.println("</td>");
-					out.println("</tr>");	
+					out.println("</tr>");
+						
 					out.println("<tr>");
 					out.println("<td>");
 						out.print("<b>Patient's Aadhar Number : </b>");
@@ -88,7 +94,8 @@ public class PatientPortalServlet extends HttpServlet{
 					out.println("<td>");
 						out.println(resultSet.getString("AadharNo"));
 					out.println("</td>");
-					out.println("</tr>");	
+					out.println("</tr>");
+						
 					out.println("<tr>");
 					out.println("<td>");
 						out.print("<b>Disease Name or Type : </b>");
@@ -96,7 +103,8 @@ public class PatientPortalServlet extends HttpServlet{
 					out.println("<td>");
 						out.println(resultSet.getString("Disease"));
 					out.println("</td>");
-					out.println("</tr>");	
+					out.println("</tr>");
+						
 					out.println("<tr>");
 					out.println("<td>");
 						out.print("<b>Report Id : </b>");
@@ -104,7 +112,8 @@ public class PatientPortalServlet extends HttpServlet{
 					out.println("<td>");
 						out.println(resultSet.getString("ReportId"));
 					out.println("</td>");
-					out.println("</tr>");	
+					out.println("</tr>");
+						
 					out.println("<tr>");
 					out.println("<td>");
 						out.print("<b>Report Status : </b>");
@@ -112,7 +121,8 @@ public class PatientPortalServlet extends HttpServlet{
 					out.println("<td>");
 						out.println(resultSet.getString("ReportStatus"));
 					out.println("</td>");
-					out.println("</tr>");	
+					out.println("</tr>");
+						
 					out.println("<tr>");
 					out.println("<td>");
 						out.print("<b>Medicine Recommeded : </b>");
@@ -120,7 +130,8 @@ public class PatientPortalServlet extends HttpServlet{
 					out.println("<td>");
 						out.println(resultSet.getString("Medicine"));
 					out.println("</td>");
-					out.println("</tr>");	
+					out.println("</tr>");
+						
 					out.println("<tr>");
 					out.println("<td>");
 						out.print("<b>Note issued by the Doctor : </b>");
@@ -131,17 +142,18 @@ public class PatientPortalServlet extends HttpServlet{
 					out.println("</tr>");
 					out.println("</div>");
 				out.println("</table>");
+				out.println("<br>");
 				out.println("<button id='print-btn' onclick='print_page()'>Download Report</button>");
 				out.println("<script src='script.js'></script>");
 			}
 		}
 		catch(Exception e) {
-		    out.println("<h1 text-align='center'>");
+			out.println("<h1 text-align='center'>");
 		    out.println("Some Error Occured. Please contact the development team");
 		    out.println("</h1>");
 		    System.out.println(e);
 		}
-
+		
 	}
 
 }
